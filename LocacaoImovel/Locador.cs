@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace LocacaoImovel
 {
-    internal class Locador : Pessoa
+    public class Locador : Pessoa
     {
-        private List<Casa> CasasDoLocador;
-        private List<Casa> CasasDisponiveis;
+        private List<Casa> CasasDoLocador { get; set; }
+        private List<Casa> CasasDisponiveis { get; set; }
 
         public Locador(string nome, string cpf, string rg, string sexo, DateTime dataNascimento) 
                : base(nome, cpf, rg, sexo, dataNascimento)
@@ -17,6 +17,8 @@ namespace LocacaoImovel
             CasasDoLocador = new List<Casa>();
             CasasDisponiveis = new List<Casa>();
         }
+
+        #region Getters Methods
 
         public List<Casa> getCasasDoLocador()
         {
@@ -28,6 +30,10 @@ namespace LocacaoImovel
             return CasasDisponiveis;
         }
 
+        #endregion
+
+        #region Setters Methods
+
         public void setCasasDoLocador(Casa casa)
         {
             CasasDoLocador.Add(casa);
@@ -37,9 +43,11 @@ namespace LocacaoImovel
             }
         }
 
-        private void setCasasDisponiveis(Casa casa)
+        public void setCasasDisponiveis(Casa casa)
         {
             CasasDisponiveis.Add(casa);
         }
+
+        #endregion
     }
 }

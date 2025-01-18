@@ -24,6 +24,8 @@ namespace LocacaoImovel
             setDataNascimento(dataNascimento);
         }
 
+        #region Getters Methods
+
         protected int getID()
         {
             return ID;
@@ -49,10 +51,14 @@ namespace LocacaoImovel
             return Sexo;
         }
 
-        protected DateTime getDataNascimento() 
+        protected DateTime getDataNascimento()
         {
             return DataNascimento;
         }
+
+        #endregion
+
+        #region Setters Methods
 
         protected void setID(int id)
         {
@@ -83,5 +89,7 @@ namespace LocacaoImovel
         {
             DataNascimento = dataNascimento;
         }
+
+        #endregion
     }
 }

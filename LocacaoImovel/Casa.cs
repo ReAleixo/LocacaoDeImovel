@@ -13,7 +13,7 @@ namespace LocacaoImovel
         private int MetrosQuadrados { get; set; }
         private float ValorAluguel { get; set; }
         private bool Alugada { get; set; }
-        private string Locatario { get; set; }
+        private Locatario Locatario { get; set; }
 
         public Casa(int numeroComodos, int metrosQuadrados, float valorAluguel)
         {
@@ -21,7 +21,11 @@ namespace LocacaoImovel
             MetrosQuadrados = metrosQuadrados;
             ValorAluguel = valorAluguel;
             Alugada = false;
+            Locatario = null;
+            NumeroCasa = 0;
         }
+
+        #region Getters Methods
 
         public int getNumeroCasa()
         {
@@ -48,6 +52,15 @@ namespace LocacaoImovel
             return Alugada;
         }
 
+        public Locatario getLocatario()
+        {
+            return Locatario; 
+        }
+
+        #endregion
+
+        #region Setters Methods
+
         public void setNumeroCasa(int numeroCasa)
         {
             NumeroCasa = numeroCasa;
@@ -72,5 +85,12 @@ namespace LocacaoImovel
         {
             Alugada = alugada;
         }
+
+        public void setLocatario(Locatario locatario)
+        {
+            Locatario = locatario;
+        }
+
+        #endregion
     }
 }

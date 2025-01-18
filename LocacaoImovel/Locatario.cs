@@ -9,15 +9,15 @@ namespace LocacaoImovel
     public class Locatario : Pessoa
     {
         private bool ProcurandoCasaParaAlugar { get; set; }
-        private Casa CasaDesejada;
-
-
+        private Casa CasaDesejada { get; set; }
 
         public Locatario(string nome, string cpf, string rg, string sexo, DateTime dataNascimento)
                : base(nome, cpf, rg, sexo, dataNascimento)
         {
             setProcurandoCasaParaAlugar(true);
         }
+
+        #region Getters Methods
 
         public bool getProcurandoCasaParaAlugar()
         {
@@ -29,6 +29,10 @@ namespace LocacaoImovel
             return CasaDesejada;
         }
 
+        #endregion
+
+        #region Setters Methods
+
         public void setProcurandoCasaParaAlugar(bool procurandoCasaParaAlugar)
         {
             ProcurandoCasaParaAlugar = procurandoCasaParaAlugar;
@@ -39,14 +43,6 @@ namespace LocacaoImovel
             CasaDesejada = new Casa(numeroComodos, metrosQuadrados, valorAluguel);
         }
 
-        public void AceitarAluguel()
-        {
-
-        }
-
-        public void DevolverCasa()
-        {
-
-        }
+        #endregion
     }
 }
