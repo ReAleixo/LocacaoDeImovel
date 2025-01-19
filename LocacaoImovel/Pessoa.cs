@@ -8,7 +8,7 @@ namespace LocacaoImovel
 {
     public abstract class Pessoa
     {
-        private int ID { get; set; }
+        private int ID { get; }
         private string Nome { get; set; }
         private string CPF { get; set; }
         private string RG { get; set; }
@@ -59,11 +59,6 @@ namespace LocacaoImovel
         #endregion
 
         #region Setters Methods
-
-        protected void setID(int id)
-        {
-            ID = id;
-        }
 
         protected void setNome(string nome)
         {

@@ -8,6 +8,7 @@ namespace LocacaoImovel
 {
     public class Casa
     {
+        private int ID { get; set; }
         private int NumeroCasa { get; set; }
         private int NumeroComodos { get; set; }
         private int MetrosQuadrados { get; set; }
@@ -17,12 +18,12 @@ namespace LocacaoImovel
 
         public Casa(int numeroComodos, int metrosQuadrados, float valorAluguel)
         {
-            NumeroComodos = numeroComodos;
-            MetrosQuadrados = metrosQuadrados;
-            ValorAluguel = valorAluguel;
-            Alugada = false;
-            Locatario = null;
-            NumeroCasa = 0;
+            setNumeroComodos(numeroComodos);
+            setMetrosQuadrados(metrosQuadrados);
+            setValorAluguel(valorAluguel);
+            setAlugada(false);
+            setLocatario(null);
+            setNumeroCasa(0);
         }
 
         #region Getters Methods
